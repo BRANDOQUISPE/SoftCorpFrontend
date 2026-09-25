@@ -14,5 +14,4 @@ export class EquiposComplicados {
   volver() {
     this.router.navigate(['/jefe']);
   }
-
 }

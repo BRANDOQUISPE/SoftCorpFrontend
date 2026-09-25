@@ -1,0 +1,67 @@
+<div class="registrar-container">
+
+  <header class="header">
+
+    <div>
+      <h1>Soft Corporation</h1>
+      <p>Panel del Jefe</p>
+    </div>
+
+    <button (click)="volver()">Volver</button>
+
+  </header>
+
+  <main class="content">
+
+    <div class="page-title">
+      <h2>Registrar incidencia</h2>
+      <p>Ingrese la información correspondiente al nuevo incidente.</p>
+    </div>
+
+    <div class="form-card">
+
+      <div class="form-group">
+        <label for="equipo">Equipo</label>
+
+        <select id="equipo">
+          <option>EQ-001 - Computadora de laboratorio</option>
+          <option>EQ-014 - Computadora de administración</option>
+          <option>EQ-023 - Equipo de laboratorio</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="tipo">Tipo de incidencia</label>
+
+        <select id="tipo">
+          <option>Hardware</option>
+          <option>Software</option>
+          <option>Red</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="descripcion">Descripción</label>
+
+        <textarea
+          id="descripcion"
+          rows="5"
+          placeholder="Describa el problema presentado">
+        </textarea>
+      </div>
+
+      <button
+        class="register-button"
+        (click)="registrar()">
+        Registrar incidencia
+      </button>
+
+      @if (mensaje) {
+        <p class="mensaje">{{ mensaje }}</p>
+      }
+
+    </div>
+
+  </main>
+
+</div>

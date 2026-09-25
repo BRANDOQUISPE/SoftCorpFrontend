@@ -9,6 +9,9 @@ import { Disponibilidad } from './jefe/disponibilidad/disponibilidad';
 import { AsignarIncidencia } from './jefe/asignar-incidencia/asignar-incidencia';
 import { EquiposComplicados } from './jefe/equipos-complicados/equipos-complicados';
 import { IncidentesSolucionados } from './jefe/incidentes-solucionados/incidentes-solucionados';
+
+import { RegistrarIncidencia } from './jefe/registrar-incidencia/registrar-incidencia';
+import { HistorialEquipos } from './jefe/historial-equipos/historial-equipos';
 export const routes: Routes = [
   {
     path: 'login',
@@ -48,5 +51,13 @@ export const routes: Routes = [
   {
     path: 'jefe/incidentes-solucionados',
     component: IncidentesSolucionados
-  }
+  },
+  {
+  path: 'jefe/registrar-incidencia',
+  component: RegistrarIncidencia
+},
+  {
+  path: 'jefe/historial-equipos',
+  component: HistorialEquipos
+}
 ];

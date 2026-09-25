@@ -2,43 +2,177 @@
 
   <header class="header">
     <div>
-      <h1>SoftCorp</h1>
+      <h1>Soft Corporation</h1>
       <p>Panel del Jefe</p>
     </div>
 
     <button (click)="volverDashboard()">Volver</button>
   </header>
 
+
   <main class="content">
 
-    <h2>Gestión de incidencias</h2>
-    <p>Seleccione una opción:</p>
+    <div class="page-title">
+      <h2>Gestión de incidencias</h2>
+      <p>Seleccione una funcionalidad para continuar.</p>
+    </div>
 
-    <div class="menu">
 
-      <div class="menu-card" (click)="irDisponibilidad()">
-        <div class="icon">👥</div>
-        <h3>Disponibilidad de técnicos</h3>
-        <p>Consultar qué técnicos se encuentran disponibles.</p>
+    <div class="carousel">
+
+      <button
+        class="arrow left"
+        (click)="anterior()">
+        ◀
+      </button>
+
+
+      <div class="menu-card">
+
+        @if (opcionActual === 0) {
+
+          <div class="icon">👥</div>
+
+          <h3>Disponibilidad de técnicos</h3>
+
+          <p>
+            Consultar qué técnicos se encuentran
+            disponibles para atender incidentes.
+          </p>
+
+          <button (click)="irDisponibilidad()">
+            Ingresar
+          </button>
+
+        }
+
+
+        @if (opcionActual === 1) {
+
+          <div class="icon">📋</div>
+
+          <h3>Asignar incidentes</h3>
+
+          <p>
+            Asignar incidentes a los técnicos
+            disponibles.
+          </p>
+
+          <button (click)="irAsignarIncidencia()">
+            Ingresar
+          </button>
+
+        }
+
+
+        @if (opcionActual === 2) {
+
+          <div class="icon">🖥️</div>
+
+          <h3>Equipos con problemas complicados</h3>
+
+          <p>
+            Consultar el estado de equipos que
+            presentan problemas complejos.
+          </p>
+
+          <button (click)="irEquiposComplicados()">
+            Ingresar
+          </button>
+
+        }
+
+
+        @if (opcionActual === 3) {
+
+          <div class="icon">📊</div>
+
+          <h3>Incidentes solucionados</h3>
+
+          <p>
+            Consultar cuántos incidentes ha
+            solucionado cada técnico.
+          </p>
+
+          <button (click)="irIncidentesSolucionados()">
+            Ingresar
+          </button>
+
+        }
+
+
+        @if (opcionActual === 4) {
+
+          <div class="icon">📝</div>
+
+          <h3>Registrar incidencias</h3>
+
+          <p>
+            Registrar nuevos incidentes reportados
+            por el personal.
+          </p>
+
+          <button (click)="irRegistrarIncidencia()">
+            Ingresar
+          </button>
+
+        }
+
+
+        @if (opcionActual === 5) {
+
+          <div class="icon">🗂️</div>
+
+          <h3>Consultar historial de equipos</h3>
+
+          <p>
+            Consultar el historial de incidencias
+            y reparaciones de un equipo.
+          </p>
+
+          <button (click)="irHistorialEquipos()">
+            Ingresar
+          </button>
+
+        }
+
       </div>
 
-      <div class="menu-card" (click)="irAsignarIncidencia()">
-        <div class="icon">📋</div>
-        <h3>Asignar incidentes</h3>
-        <p>Asignar incidentes a los técnicos disponibles.</p>
-      </div>
 
-      <div class="menu-card" (click)="irEquiposComplicados()">
-        <div class="icon">🖥️</div>
-        <h3>Equipos con problemas complicados</h3>
-        <p>Consultar el estado de equipos con problemas complejos.</p>
-      </div>
+      <button
+        class="arrow right"
+        (click)="siguiente()">
+        ▶
+      </button>
 
-      <div class="menu-card" (click)="irIncidentesSolucionados()">
-        <div class="icon">📊</div>
-        <h3>Incidentes solucionados</h3>
-        <p>Consultar cuántos incidentes ha solucionado cada técnico.</p>
-      </div>
+    </div>
+
+
+    <div class="indicators">
+
+      <span
+        [class.active]="opcionActual === 0">
+      </span>
+
+      <span
+        [class.active]="opcionActual === 1">
+      </span>
+
+      <span
+        [class.active]="opcionActual === 2">
+      </span>
+
+      <span
+        [class.active]="opcionActual === 3">
+      </span>
+
+      <span
+        [class.active]="opcionActual === 4">
+      </span>
+
+      <span
+        [class.active]="opcionActual === 5">
+      </span>
 
     </div>
 

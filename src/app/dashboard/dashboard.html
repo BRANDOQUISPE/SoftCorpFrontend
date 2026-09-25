@@ -3,7 +3,7 @@
   <header class="header">
 
     <div>
-      <h1>SoftCorp</h1>
+      <h1>Soft Corporation</h1>
       <p>Sistema de Gestión de Incidencias</p>
     </div>
 
@@ -18,38 +18,41 @@
 
     <div class="roles">
 
-      <div class="role-card" (click)="seleccionarRol('jefe')">
+      <div class="role-card" >
         <div class="icon">👔</div>
         <h3>Jefe</h3>
         <p>
           Gestión y supervisión de incidentes,
           técnicos y equipos.
         </p>
-        <button>Ingresar</button>
+        <button (click)="seleccionarRol('jefe')">Ingresar</button>
       </div>
 
-      <div class="role-card" (click)="seleccionarRol('tecnico')">
+      <div class="role-card" >
         <div class="icon">🔧</div>
         <h3>Técnico</h3>
         <p>
           Gestión de tareas, reparaciones,
           repuestos e informes.
         </p>
-        <button>Ingresar</button>
+        <button (click)="seleccionarRol('tecnico')">Ingresar</button>
       </div>
 
-      <div class="role-card" (click)="seleccionarRol('personal')">
+      <div class="role-card" >
         <div class="icon">👤</div>
         <h3>Personal</h3>
         <p>
           Registro de incidentes y consulta
           del historial de equipos.
         </p>
-        <button>Ingresar</button>
+        <button (click)="seleccionarRol('personal')">Ingresar</button>
       </div>
 
     </div>
 
   </main>
-
+  <footer class="dashboard-footer">
+  <p>© 2026 Soft Corporation. Todos los derechos reservados.</p>
+  <p>Sistema de Gestión de Incidencias · v1.0</p>
+</footer>
 </div>

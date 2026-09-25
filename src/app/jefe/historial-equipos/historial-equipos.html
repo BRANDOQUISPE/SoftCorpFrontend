@@ -1,0 +1,116 @@
+<div class="historial-container">
+
+  <header class="header">
+
+    <div>
+      <h1>SoftCorp</h1>
+      <p>Panel del Jefe</p>
+    </div>
+
+    <button (click)="volver()">Volver</button>
+
+  </header>
+
+  <main class="content">
+
+    <div class="page-title">
+      <h2>Historial de equipos</h2>
+      <p>Consulte las incidencias y reparaciones registradas para un equipo.</p>
+    </div>
+
+    <div class="search-card">
+
+      <div class="form-group">
+
+        <label for="equipo">
+          Seleccione un equipo
+        </label>
+
+        <select id="equipo">
+          <option>EQ-001 - Computadora de laboratorio</option>
+          <option>EQ-014 - Computadora de administración</option>
+          <option>EQ-023 - Equipo de laboratorio</option>
+        </select>
+
+      </div>
+
+      <button
+        class="consult-button"
+        (click)="consultar()">
+
+        Consultar historial
+
+      </button>
+
+    </div>
+
+    @if (mostrarHistorial) {
+
+      <div class="history-card">
+
+        <h3>EQ-001 - Computadora de laboratorio</h3>
+
+        <div class="history-item">
+
+          <span class="date">
+            15/09/2026
+          </span>
+
+          <div>
+            <h4>Problema de encendido</h4>
+            <p>
+              Se realizó revisión de la fuente de alimentación.
+            </p>
+          </div>
+
+          <span class="status">
+            Solucionado
+          </span>
+
+        </div>
+
+        <div class="history-item">
+
+          <span class="date">
+            02/08/2026
+          </span>
+
+          <div>
+            <h4>Falla de disco</h4>
+            <p>
+              Se reemplazó la unidad de almacenamiento.
+            </p>
+          </div>
+
+          <span class="status">
+            Solucionado
+          </span>
+
+        </div>
+
+        <div class="history-item">
+
+          <span class="date">
+            18/06/2026
+          </span>
+
+          <div>
+            <h4>Problema de software</h4>
+            <p>
+              Se reinstaló y configuró el sistema operativo.
+            </p>
+          </div>
+
+          <span class="status">
+            Solucionado
+          </span>
+
+        </div>
+
+      </div>
+
+    }
+
+  </main>
+
+</div>
