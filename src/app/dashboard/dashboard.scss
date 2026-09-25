@@ -1,0 +1,176 @@
+.dashboard {
+  min-height: 100vh;
+  background-image: url('/fondoDashboard.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  color: #1f2937;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+}
+/* HEADER */
+
+.header {
+  background-color: rgba(18, 53, 91, 0.65);
+
+  color: white;
+  padding: 22px 45px;
+
+  display: flex;
+  align-items: center;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+
+  backdrop-filter: blur(6px);
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.header p {
+  margin: 5px 0 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 13px;
+}
+
+/* CONTENIDO */
+
+.content {
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  padding: 50px 30px;
+}
+
+/* BIENVENIDA */
+
+.welcome {
+  margin-bottom: 35px;
+}
+
+.welcome h2 {
+  margin: 0 0 8px;
+
+  color: #12355b;
+
+  font-size: 28px;
+}
+
+.welcome p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 15px;
+}
+
+/* TARJETAS */
+
+.roles {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 24px;
+}
+
+.role-card {
+  background-color: rgba(255, 255, 255, 0.55);
+
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+  text-align: center;
+  cursor: pointer;
+
+  backdrop-filter: blur(4px);
+
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+.role-card:hover {
+  transform: translateY(-3px);
+  background-color: rgba(255, 255, 255, 0.70);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* ICONOS */
+
+.icon {
+  width: 65px;
+  height: 65px;
+
+  margin: 0 auto 18px;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  background-color: #eaf2fb;
+
+  border-radius: 50%;
+
+  font-size: 30px;
+}
+
+/* TITULO */
+
+.role-card h3 {
+  margin: 0 0 12px;
+
+  color: #12355b;
+
+  font-size: 20px;
+}
+
+/* DESCRIPCION */
+
+.role-card p {
+  min-height: 65px;
+
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+/* BOTON */
+
+.role-card button {
+  margin-top: 20px;
+
+  padding: 10px 25px;
+
+  border: none;
+
+  border-radius: 5px;
+
+  background-color: #2563eb;
+
+  color: white;
+
+  font-size: 14px;
+
+  cursor: pointer;
+
+  transition: background-color 0.2s;
+}
+
+.role-card button:hover {
+  background-color: #1d4ed8;
+}

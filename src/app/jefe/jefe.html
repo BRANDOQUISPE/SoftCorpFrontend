@@ -1,1 +1,47 @@
-<p>jefe works!</p>
+<div class="jefe-container">
+
+  <header class="header">
+    <div>
+      <h1>SoftCorp</h1>
+      <p>Panel del Jefe</p>
+    </div>
+
+    <button (click)="volverDashboard()">Volver</button>
+  </header>
+
+  <main class="content">
+
+    <h2>Gestión de incidencias</h2>
+    <p>Seleccione una opción:</p>
+
+    <div class="menu">
+
+      <div class="menu-card" (click)="irDisponibilidad()">
+        <div class="icon">👥</div>
+        <h3>Disponibilidad de técnicos</h3>
+        <p>Consultar qué técnicos se encuentran disponibles.</p>
+      </div>
+
+      <div class="menu-card" (click)="irAsignarIncidencia()">
+        <div class="icon">📋</div>
+        <h3>Asignar incidentes</h3>
+        <p>Asignar incidentes a los técnicos disponibles.</p>
+      </div>
+
+      <div class="menu-card" (click)="irEquiposComplicados()">
+        <div class="icon">🖥️</div>
+        <h3>Equipos con problemas complicados</h3>
+        <p>Consultar el estado de equipos con problemas complejos.</p>
+      </div>
+
+      <div class="menu-card" (click)="irIncidentesSolucionados()">
+        <div class="icon">📊</div>
+        <h3>Incidentes solucionados</h3>
+        <p>Consultar cuántos incidentes ha solucionado cada técnico.</p>
+      </div>
+
+    </div>
+
+  </main>
+
+</div>

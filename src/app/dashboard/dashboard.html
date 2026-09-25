@@ -1,1 +1,55 @@
-<p>dashboard works!</p>
+<div class="dashboard">
+
+  <header class="header">
+
+    <div>
+      <h1>SoftCorp</h1>
+      <p>Sistema de Gestión de Incidencias</p>
+    </div>
+
+  </header>
+
+  <main class="content">
+
+    <div class="welcome">
+      <h2>Panel principal</h2>
+      <p>Seleccione el tipo de usuario para continuar.</p>
+    </div>
+
+    <div class="roles">
+
+      <div class="role-card" (click)="seleccionarRol('jefe')">
+        <div class="icon">👔</div>
+        <h3>Jefe</h3>
+        <p>
+          Gestión y supervisión de incidentes,
+          técnicos y equipos.
+        </p>
+        <button>Ingresar</button>
+      </div>
+
+      <div class="role-card" (click)="seleccionarRol('tecnico')">
+        <div class="icon">🔧</div>
+        <h3>Técnico</h3>
+        <p>
+          Gestión de tareas, reparaciones,
+          repuestos e informes.
+        </p>
+        <button>Ingresar</button>
+      </div>
+
+      <div class="role-card" (click)="seleccionarRol('personal')">
+        <div class="icon">👤</div>
+        <h3>Personal</h3>
+        <p>
+          Registro de incidentes y consulta
+          del historial de equipos.
+        </p>
+        <button>Ingresar</button>
+      </div>
+
+    </div>
+
+  </main>
+
+</div>
